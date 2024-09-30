@@ -38,7 +38,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -out=plan.tfplan
-        working-directory: terraform/cluster-eks
+        working-directory: mongodb-fiap-tech-challenge
 
       # Aplicar as mudanças automaticamente ao fazer push na branch main
       - name: Terraform Apply
