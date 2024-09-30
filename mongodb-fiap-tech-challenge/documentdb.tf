@@ -5,7 +5,7 @@ resource "random_password" "documentdb_password" {
 }
 
 resource "aws_docdb_cluster_parameter_group" "disabled_tls" {
-  name        = "my-docdb-parameter-group"
+  name        = "mongodb-fiap-tech-challenge-parameter-group"
   family      = "docdb5.0" 
   description = "Parameter group for DocumentDB with TLS disabled"
 
