@@ -32,15 +32,17 @@ jobs:
       # Inicializar o Terraform
       - name: Terraform Init
         run: terraform init -upgrade
-        working-directory: terraform/mongodb-fiap-tech-challenge
+        working-directory: mongodb-fiap-tech-challenge
 
       # Executar o Terraform Plan
       - name: Terraform Plan
         id: plan
         run: terraform plan -out=plan.tfplan
-        working-directory: terraform/cluster-eks
+        working-directory: mongodb-fiap-tech-challenge
 
       # Aplicar as mudanças automaticamente ao fazer push na branch main
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve plan.tfplan
+        run: terraform apply -auto-approve 
+        working-directory: mongodb-fiap-tech-challenge
+
