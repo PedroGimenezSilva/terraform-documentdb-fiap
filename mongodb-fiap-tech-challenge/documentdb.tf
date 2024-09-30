@@ -11,7 +11,7 @@ resource "aws_docdb_cluster_parameter_group" "disabled_tls" {
 
   parameter {
     name  = "tls"
-    value = "off"
+    value = "disabled"
   }
 }
 
