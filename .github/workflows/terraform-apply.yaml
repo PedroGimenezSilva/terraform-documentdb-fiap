@@ -32,7 +32,7 @@ jobs:
       # Inicializar o Terraform
       - name: Terraform Init
         run: terraform init -upgrade
-        working-directory: terraform/mongodb-fiap-tech-challenge
+        working-directory: mongodb-fiap-tech-challenge
 
       # Executar o Terraform Plan
       - name: Terraform Plan
