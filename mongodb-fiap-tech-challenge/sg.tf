@@ -17,7 +17,7 @@ resource "aws_security_group" "documentdb_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name = "DocumentDB Security Group"
+    Name = "DocumentDBSecurityGroup"
     provider = "terraform"
     cluster_name = "mongodb-fiap-tech-challenge"
   }
