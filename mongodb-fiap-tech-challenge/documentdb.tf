@@ -1,7 +1,7 @@
 resource "random_password" "documentdb_password" {
   length           = 16
   special          = true  
-  override_special = "%@!" 
+  override_special = "@!" 
 }
 
 resource "aws_docdb_cluster_parameter_group" "disabled_tls" {
